@@ -31,7 +31,7 @@
 
                 <li class="nav-item nav-item staff-menu">
                     <a href="#" class="nav-link staff">
-                        <i class="nav-icon fas fa-info-circle"></i>
+                        <i class="nav-icon fas fa-user"></i>
                         <p>
                             Staff
                             <i class="right fas fa-angle-left"></i>
@@ -58,7 +58,7 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link daily_report_staff">
+                            <a href="{{ route('daily.report_index') }}" class="nav-link daily_report_staff">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Daily Report</p>
                             </a>

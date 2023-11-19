@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DailyReportWebController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StaffWebController;
 use Illuminate\Support\Facades\Route;
@@ -49,6 +50,14 @@ Route::group(['middleware' => ['auth'],['TrackUserSession']], function () {
 
         Route::get('/attendance-list','attendanceTable')->name('attendance.table');
         Route::get('/attendance-data-table','attendanceDataTable')->name('attendance.data_table');
+
+    });
+
+
+    Route::controller(DailyReportWebController::class)->group(function(){
+        Route::get('/daily-report_index','index')->name('daily.report_index');
+        Route::get('/daily-report','DailyReport')->name('daily.report');
+
 
     });
 
