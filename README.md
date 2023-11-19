@@ -57,10 +57,10 @@
 ```
 
 
-# For Admin Login 
+# For Admin Panel 
 
 ## Post Method
-## http://localhost:8000/api/admin/login
+## http://localhost:8000/login
 
 ```
 {
