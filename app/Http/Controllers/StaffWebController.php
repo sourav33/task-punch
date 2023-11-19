@@ -19,7 +19,7 @@ class StaffWebController extends Controller
         $startDate = $request->input('start_date', Carbon::now()->startOfDay()->format('Y-m-d H:i:s'));
         $endDate = $request->input('end_date', Carbon::now()->format('Y-m-d H:i:s'));
 
-        $data = Location::whereBetween('datetime', [$startDate, $endDate])
+        $data = Location::whereBetween('locations.datetime', [$startDate, $endDate])
             ->join('staff', 'locations.staff_id', '=', 'staff.staff_id')
             ->select(
                 'staff.id',

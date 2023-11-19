@@ -108,7 +108,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: '{{ route('attendance.data_table') }}',
+                    url: '{{ route('staff.data_table') }}',
                 },
                 columns: [{
                         data: 'staff_id',
