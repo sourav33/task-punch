@@ -42,6 +42,21 @@
 ```
 
 
+# For Staff Change Password 
+
+## Post Method
+## http://localhost:8000/api/staff/changePassword
+
+```
+{
+    "staff_id":"1256366",
+    "current_pass":"1234",
+    "new_pass":"9999",
+    "re_pass":"9999"
+}
+```
+
+
 # For Admin Login 
 
 ## Post Method
@@ -55,7 +70,7 @@
 }
 ```
 
-
+<!-- 
 # For Staff List 
 
 ## Get Method
@@ -73,20 +88,6 @@
     "start_date":"2023-11-18",
     "end_date":"2023-11-19"
 }
-```
+``` -->
 
-
-# For Staff Change Password 
-
-## Post Method
-## http://localhost:8000/api/staff/changePassword
-
-```
-{
-    "staff_id":"1256366",
-    "current_pass":"1234",
-    "new_pass":"9999",
-    "re_pass":"9999"
-}
-```
 
