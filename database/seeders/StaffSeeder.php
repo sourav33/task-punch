@@ -20,6 +20,7 @@ class StaffSeeder extends Seeder
                 'staff_id' => '1256366',
                 'name' => 'Staff A',
                 'password' => Hash::make('1234'),
+                'status' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]

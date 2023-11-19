@@ -1,0 +1,25 @@
+ 
+
+
+ErrorDocument 403 "<meta http-equiv='refresh' content='0; url=/AccessDenied/'/>"
+ErrorDocument 404 "<meta http-equiv='refresh' content='0; url=/AccessDenied/'/>"
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+ 
+ 
+
+
+
+
+
+Options -Indexes
+#comments
+
+IndexOptions FancyIndexing
+
+
+IndexIgnore *.php*
+IndexIgnore *.css*
+IndexIgnore *.js*
