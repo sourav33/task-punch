@@ -59,7 +59,6 @@
 
 # For Admin Panel 
 
-## Post Method
 ## http://localhost:8000/login
 
 ```
