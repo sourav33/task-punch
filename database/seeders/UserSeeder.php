@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Admin',
                 'username' => '963852',
-                'password' => Hash::make('1234'),,
+                'password' => Hash::make('1234'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]
