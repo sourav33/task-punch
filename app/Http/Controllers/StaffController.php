@@ -53,7 +53,8 @@ class StaffController extends Controller
         $staff_id = $request->staff_id;
         $new_pass = $request->new_pass;
 
-        $staff = Staff::find($staff_id);
+        // $staff = Staff::find($staff_id);
+        $staff = Staff::where("staff_id", $staff_id)->first();
 
         // Check if the current password provided in the request matches the existing password
         if (Hash::check($request->current_pass, $staff->password)) {

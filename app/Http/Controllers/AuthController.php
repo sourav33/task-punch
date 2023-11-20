@@ -15,6 +15,7 @@ class AuthController extends Controller
 
     public function index(){
         return view('auth.login');
+        // return response(view('auth.login'),401);
     }
 
 
@@ -61,7 +62,7 @@ class AuthController extends Controller
         Session::flush();
         Auth::logout();
 
-        return redirect('dashboard');
+        return redirect('login');
     }
 
 

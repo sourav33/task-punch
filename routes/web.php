@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware'=>'guest'],function(){
 
+    Route::get('/',[AuthController::class,'index']);
     Route::get('login',[AuthController::class,'index'])->name('login');
     Route::post('login',[AuthController::class,'login'])->name('login');
 
@@ -38,7 +39,7 @@ Route::group(['middleware'=>'guest'],function(){
 Route::group(['middleware' => ['auth'],['TrackUserSession']], function () {
 
     Route::controller(DashboardController::class)->group(function(){
-        Route::get('/','index');
+        // Route::get('/','index');
         Route::get('/dashboard','index')->name('dashboard');
         Route::get('/home','index')->name('home');
 
