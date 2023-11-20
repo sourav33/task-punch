@@ -51,6 +51,9 @@ Route::group(['middleware' => ['auth'],['TrackUserSession']], function () {
         Route::get('/attendance-list','attendanceTable')->name('attendance.table');
         Route::get('/attendance-data-table','attendanceDataTable')->name('attendance.data_table');
 
+        Route::post('/staff-add','staffStore')->name('staff.add');
+        Route::post('/staff-edit','staffUpdate')->name('staff.edit');
+
     });
 
 
