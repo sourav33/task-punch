@@ -11,8 +11,9 @@ class Staff extends Authenticatable
 {
     use HasApiTokens, HasFactory;
     protected $guard = 'staff';
-    protected $primaryKey = 'staff_id';
+    // protected $primaryKey = 'staff_id';
     protected $fillable = [
+        'staff_id',
         'name',
         'password',
     ];

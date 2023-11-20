@@ -12,6 +12,13 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function loginIndex() {
+        return view('pages.home');
+    }
+    public function adminHome() {
+        return view('pages.home');
+    }
+
     public function defaultLogin() {
 
         return response()->json(['success' => false, 'message' => 'Unauthenticated'], 401);

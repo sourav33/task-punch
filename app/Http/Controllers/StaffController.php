@@ -6,6 +6,8 @@ use App\Models\Staff;
 use App\Http\Requests\StoreStaffRequest;
 use App\Http\Requests\UpdateStaffRequest;
 use App\Http\Requests\CheckStaffLoginRequest;
+use App\Models\Location;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -32,16 +34,16 @@ class StaffController extends Controller
 
     }
 
-    public function staffDetails(Request $request) {
-        $user = Auth::user();
-        return response()->json(['data' => $user], 200);
-    }
+    // public function staffDetails(Request $request) {
+    //     $user = Auth::user();
+    //     return response()->json(['data' => $user], 200);
+    // }
 
 
-    public function staffList(Request $request) {
-        $staff = Staff::all();
-        return response()->json($staff, 200);
-    }
+    // public function staffList(Request $request) {
+    //     $staff = Staff::all();
+    //     return response()->json($staff, 200);
+    // }
 
 
 
@@ -75,4 +77,8 @@ class StaffController extends Controller
 
         return response()->json(['success' => true, 'message' => 'Staff logged out successfully'], 200);
     }
+
+
+
+
 }
