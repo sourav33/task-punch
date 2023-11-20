@@ -47,7 +47,7 @@
 
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="#" class="h2"><b>Tropical Pathology</b> Test Login</a>
+                <a href="#" class="h2"><b>Admin</b> Login</a>
             </div>
             <div class="card-body">
                 {{-- @if ($errors->any())

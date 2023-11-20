@@ -44,18 +44,23 @@
                             </tr>
                         </thead>
                         <tbody>
-
-                            @foreach ($data as $row)
+                            @if (count($data) > 0)
+                                @foreach ($data as $row)
+                                    <tr>
+                                        <td>{{ $row['staff_id'] }}</td>
+                                        <td>{{ $row['name'] }}</td>
+                                        <td>{{ $row['type'] == 1 ? 'Punch In' : 'Punch Out' }}</td>
+                                        <td>{{ $row['datetime'] }}</td>
+                                        <td><span
+                                                class="tag tag-success">{{ $row['status'] == 1 ? 'Active' : 'Inactive' }}</span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @else
                                 <tr>
-                                    <td>{{ $row['staff_id'] }}</td>
-                                    <td>{{ $row['name'] }}</td>
-                                    <td>{{ $row['type'] == 1 ? 'Punch In' : 'Punch Out' }}</td>
-                                    <td>{{ $row['datetime'] }}</td>
-                                    <td><span
-                                            class="tag tag-success">{{ $row['status'] == 1 ? 'Active' : 'Inactive' }}</span>
-                                    </td>
+                                    <td colspan="5">No data found.</td>
                                 </tr>
-                            @endforeach
+                            @endif
                         </tbody>
                     </table>
                 </div>
