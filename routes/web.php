@@ -55,8 +55,8 @@ Route::group(['middleware' => ['auth'],['TrackUserSession']], function () {
 
 
     Route::controller(DailyReportWebController::class)->group(function(){
-        Route::get('/daily-report_index','index')->name('daily.report_index');
-        Route::get('/daily-report','DailyReport')->name('daily.report');
+        Route::get('/daily-report','index')->name('daily.report_index');
+        // Route::get('/daily-report','DailyReport')->name('daily.report');
 
 
     });
